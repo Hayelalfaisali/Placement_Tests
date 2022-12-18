@@ -9,7 +9,11 @@
 body {
     background-color: aliceblue;
 }
-
+.info_box #msg {
+    text-align: center;
+    color: red;
+    font-size: larger;
+}
 .start_btn,
 .info_box,
 .quiz_box,
