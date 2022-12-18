@@ -729,7 +729,7 @@ audio.onclick = function() {
 
 }
 var btn = document.getElementById("close");
-    btn.pause();
+    
 
 btn.onclick = function() {
 
