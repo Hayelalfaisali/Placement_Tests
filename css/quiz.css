@@ -211,7 +211,7 @@ button:active {
         height: 110px;
         display: none;
         border: 0px solid rgb(23, 8, 59);
-        margin-bottom:50px;
+        margin-bottom:100px;
     }
     #close {
         position: absolute;
