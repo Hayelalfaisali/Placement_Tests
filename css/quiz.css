@@ -208,9 +208,10 @@ button:active {
         top: 13.5%;
         right: 0%;
         width: 98%;
-        height: 100px;
+        height: 110px;
         display: none;
         border: 0px solid rgb(23, 8, 59);
+        margin-bottom:30px;
     }
     #close {
         position: absolute;
