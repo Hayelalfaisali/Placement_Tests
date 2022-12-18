@@ -732,6 +732,7 @@ var btn = document.getElementById("close");
     
 
 btn.onclick = function() {
+    window.stop();
 
     window.addEventListener("click", function() {
 
