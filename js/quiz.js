@@ -730,6 +730,7 @@ audio.onclick = function() {
 }
 var btn = document.getElementById("close");
 btn.onclick = function() {
+    btn.pause();
 
     window.addEventListener("click", function() {
 
@@ -738,16 +739,4 @@ btn.onclick = function() {
 
 
     });
-}
-btn.children[0];
-var isPlaying = false;
-btn.pause();
-
-function playPause() {
-    if (isPlaying) {
-        btn.pause();
-    } else {
-        btn.play();
-    }
-    isPlaying = !isPlaying;
 }
