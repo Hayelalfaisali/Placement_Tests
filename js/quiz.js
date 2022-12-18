@@ -739,3 +739,15 @@ btn.onclick = function() {
 
     });
 }
+btn.children[0];
+var isPlaying = false;
+btn.pause();
+
+function playPause() {
+    if (isPlaying) {
+        btn.pause();
+    } else {
+        btn.play();
+    }
+    isPlaying = !isPlaying;
+}
