@@ -729,8 +729,9 @@ audio.onclick = function() {
 
 }
 var btn = document.getElementById("close");
-btn.onclick = function() {
     btn.pause();
+
+btn.onclick = function() {
 
     window.addEventListener("click", function() {
 
