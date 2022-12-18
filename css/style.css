@@ -93,3 +93,23 @@ body {
 .buttons button.restart:hover {
     background: #0263ca;
 }
+
+@media(min-width:350px) {
+    .start_btn,
+    .info_box,
+    .quiz_box,
+    .result_box {
+        direction: rtl;
+        position: absolute;
+        width: 80%;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 4px 8px 0 rgba(0, 0, 0, 0.19);
+        transition: all 0.2s ease;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+}
