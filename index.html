@@ -1,1 +1,47 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Start quiz btn -->
+
+    <!-- information nd rules box -->
+    <div class="info_box">
+        <div class="info_title">
+            <span>يرجى مراعاة الملاحظات التالية قبل البدء بالاختبار:</span>
+        </div>
+        <div class="info_list">
+            <div class="info">1- سيكون هناك 60 دقيقة من الوقت للاختبار .</div>
+            <div class="info">2-يجب فقط إختيار إجابة واحدة وعدم تكرارها.</div>
+            <div class="info">3- لا يمكنك الخروج من الاختبار عندما تكون فيه.</div>
+        </div>
+        <div class="buttons">
+
+            <button class="restart" id="btn">ابداء الاختبار</button>
+        </div>
+    </div>
+    <script>
+        var btn = document.getElementById("btn");
+        btn.onclick = function() {
+            var password = prompt("Enter the password");
+            if (password == "12345") {
+                parent.location = 'quiz.html';
+            } else {
+                alert("Password is invalid!!!");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
