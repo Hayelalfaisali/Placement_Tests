@@ -3,68 +3,72 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placement Test</title>
-
-    <!-- css file link -->
-    <link rel="stylesheet" href="css/quiz.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- <img src="logo.png" alt="img" id="img" class="img"> -->
-    <h1 id="title">Placement Test </h1>
-    <button id="close">إغلاق</button>
-    <iframe src="demo_iframe.htm" class="iframe" name="iframe_a" title="Iframe Example"></iframe>
-    <!-- quiz-container -->
-    <div id="quiz-container">
-        <!-- question container -->
-        <div class="questions">
-            <p id="main"></p>
-            <p id="desc"></p>
-            <p>
-                <a href="audios.html" target="iframe_a" id="song"></a>
-            </p>
-            <h2 id="question"></h2>
-            <ol type="A">
-                <li class="option"><span id="option0" onclick="calcScore(this)"></span></li>
-                <li class="option"><span id="option1" onclick="calcScore(this)"></span></li>
-                <li class="option"><span id="option2" onclick="calcScore(this)"></span></li>
-                <li class="option"><span id="option3" onclick="calcScore(this)"></span></li>
-            </ol>
-            <h4 id="stat"></h4>
-        </div>
+    <!-- Start quiz btn -->
 
+    <!-- information nd rules box -->
+    <div class="info_box">
+        <div class="info_title">
+            <span>يرجى مراعاة الملاحظات التالية قبل البدء بالاختبار:</span>
+        </div>
+        <div class="info_list">
+            <div class="info">1- سيكون هناك 60 دقيقة من الوقت للاختبار .</div>
+            <div class="info">2-يجب فقط إختيار إجابة واحدة وعدم تكرارها.</div>
+            <div class="info">3- لا يمكنك الخروج من الاختبار عندما تكون فيه.</div>
+        </div>
         <div class="buttons">
-            <button type="button" class="previous">previous</button>
 
-            <button type="button" class="next">Next</button>
+            <button class="restart" id="btn">ابداء الاختبار</button>
         </div>
-    </div>
-    <!-- scoreboard section -->
-    <div id="scoreboard">
-        <img src="images/logo.png" alt="">
-        <h2 id="score-title">You Have Done</h2>
-        <h2 id="score" hidden></h2>
-        <h2 id="level" hidden>hi</h2>
-        <input id="number" type="numric" hidden value="779288403" placeholder="phone 966506666666">
-        <input id="name" type="text" placeholder="ادخل اسمك الكامل هنا">
-        <input id="msg" type="text" placeholder="type msg" hidden>
-        <button onclick="send_handle()">send</button>
-        <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
-        <!-- <button type="button" id="check-answer" onclick="checkAnswer()">Check Answers</button> -->
+        <p id="msg"></p>
+
     </div>
 
-    <!-- answers section -->
-    <div id="answerBank">
-        <h2>Answers :</h2>
-        <ol type="1" id="answers">
+    <script>
+        var btn = document.getElementById("btn");
+        btn.onclick = function() {
+            var password = prompt("Enter the password");
+            if (password == "12345") {
+                parent.location = 'quiz.html';
+            } else {
+                var msg = document.getElementById("msg");
+                msg.innerHTML = "كلمة المرور غير صحيحة";
+            }
+        }
 
-        </ol>
-        <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
-    </div>
+        function sendMail() {
+            $.ajax({
+                type: 'POST',
+                url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+                data: {
+                    'key': 'YOUR API KEY HERE',
+                    'message': {
+                        'from_email': 'YOUR@EMAIL.HERE',
+                        'to': [{
+                            'email': 'RECIPIENT@EMAIL.HERE',
+                            'name': 'RECIPIENT NAME (OPTIONAL)',
+                            'type': 'to'
+                        }],
+                        'autotext': 'true',
+                        'subject': 'YOUR SUBJECT HERE!',
+                        'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
+                    }
+                }
+            }).done(function(response) {
+                console.log(response); // if you're into that sorta thing
+            });
+        }
+    </script>
 
-    <!-- javascript file source -->
-    <script src="js/quiz.js"></script>
+
 </body>
 
 </html>
