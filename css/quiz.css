@@ -284,6 +284,9 @@ button:active {
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
     }
+    #scoreboard .saveBtn {
+    margin-top: 40px;
+}
 }
 
 
