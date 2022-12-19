@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Wuiz</title>
+    <title>Placement Test</title>
 
     <!-- css file link -->
     <link rel="stylesheet" href="css/quiz.css">
@@ -43,9 +43,13 @@
     <!-- scoreboard section -->
     <div id="scoreboard">
         <img src="images/logo.png" alt="">
-        <h2 id="score-title">Your Score</h2>
-        <h2 id="score"></h2>
-        <h2 id="level">Your Level</h2>
+        <h2 id="score-title">You Have Done</h2>
+        <h2 id="score" hidden></h2>
+        <h2 id="level" hidden>hi</h2>
+        <input id="number" type="numric" hidden value="779288403" placeholder="phone 966506666666">
+        <input id="name" type="text" placeholder="ادخل اسمك الكامل هنا">
+        <input id="msg" type="text" placeholder="type msg" hidden>
+        <button onclick="send_handle()">send</button>
         <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
         <!-- <button type="button" id="check-answer" onclick="checkAnswer()">Check Answers</button> -->
     </div>
