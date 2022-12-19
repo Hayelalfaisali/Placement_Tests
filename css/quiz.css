@@ -163,6 +163,7 @@ button:active {
     padding: 2rem;
     text-align: center;
     margin: auto;
+        border: 1px solid black;
     position: relative;
     top: 5rem;
     display: none;
@@ -249,6 +250,7 @@ button:active {
         top: 13.5%;
         right: 0%;
         width: 98%;
+        margin-bottom:30px;
         height: 100px;
         display: none;
         border: 0px solid rgb(23, 8, 59);
