@@ -34,8 +34,8 @@ img {
 
 .questions {
     margin: 3rem auto;
-    width: 90vw;
-    padding: 2rem;
+    width: 95vw;
+    padding: .5rem;
     color: black;
     background: rgba(220, 230, 250, 0.77);
     cursor: default;
@@ -45,12 +45,12 @@ img {
 .questions #main {
     color: rgb(71, 30, 30);
     margin-bottom: 10px;
-    padding: 20px;
+    padding: 5px;
     background: rgba(220, 230, 250, 0.77);
 }
 
 .questions p a {
-    font-size: 20px;
+    font-size: 5px;
     direction: rtl;
     text-align: center;
     color: #004696;
@@ -61,7 +61,7 @@ img {
 
 #desc {
     font-size: larger;
-    padding: 20px;
+    padding: 5px;
 }
 
 #question {
@@ -70,7 +70,7 @@ img {
     color: brown;
     margin-top: 15px;
     border: 1px solid rgb(52, 50, 50);
-    padding: 20px;
+    padding: 5px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
