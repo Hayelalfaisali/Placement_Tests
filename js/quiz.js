@@ -641,46 +641,43 @@ function nextQuestion() {
         quizContainer.style.display = 'none';
         scoreboard.style.display = 'block'
     }
-    if (score > 1 || score === 5) {
+    if (score >= 1 && score <= 5) {
         level.innerHTML = "Interchange Third Edition Intro, first half";
 
-    } else if (score > 6 || score === 11) {
+    } else if (score >= 6 && score <= 11) {
         level.innerHTML = "Interchange Third Edition Intro, second half";
 
-    } else if (score > 12 || score === 17) {
+    } else if (score >= 12 && score <= 17) {
         level.innerHTML = "Interchange Third Edition Level 1, first half";
 
-    } else if (score < 18 || score === 23) {
+    } else if (score >= 18 && score <= 23) {
         level.innerHTML = "Interchange Third Edition Level 1, second half";
 
-    } else if (score < 24 || score === 30) {
+    } else if (score >= 24 && score <= 30) {
         level.innerHTML = "Interchange Third Edition Level 2, first half";
 
-    }
-    /*
-    else if (score.length < 31) {
-        level.innerHTML = "Interchange Third Edition Level 2, second half";
+    } else if (score >= 31 && score <= 36) {
+        level.innerHTML = "Interchange Third Edition Level2, second half";
 
-    } else if (score.length > 37 && score <= 42) {
+    } else if (score >= 37 && score <= 42) {
         level.innerHTML = "Interchange Third Edition Level 3, first half";
 
-    } else if (score.length > 43 && score <= 49) {
+    } else if (score >= 43 && score <= 49) {
         level.innerHTML = "Interchange Third Edition Level 3, second half";
 
-    } else if (score => 50 && score <= 55) {
+    } else if (score >= 50 && score <= 55) {
         level.innerHTML = "Passages Level 1, first half";
 
-    } else if (score => 56 && score <= 61) {
+    } else if (score >= 56 && score <= 61) {
         level.innerHTML = "Passages Level 1, second half";
 
-    } else if (score => 62 && score <= 68) {
+    } else if (score >= 62 && score <= 68) {
         level.innerHTML = "Passages Level 2, first half";
 
-    } else if (score => 69 && score <= 70) {
+    } else if (score >= 69 && score <= 70) {
         level.innerHTML = "Passages Level 2, second half";
 
     }
-*/
 }
 
 //function to display previous question
@@ -729,16 +726,24 @@ audio.onclick = function() {
 
 }
 var btn = document.getElementById("close");
-    
 
 btn.onclick = function() {
-    window.stop();
 
     window.addEventListener("click", function() {
 
         document.querySelector(".iframe").style.display = "none";
+
         document.querySelector("#close").style.display = "none";
 
-
     });
+}
+
+function send_handle() {
+
+    let num = document.getElementById("number").value;
+    let msg = document.getElementById("msg").value;
+    msg = level.innerHTML;
+    let name = document.getElementById("name").value;
+    var win = window.open(`https://wa.me/${num}?text=I%27m ${name}%20My result is : %20${msg}`, '_blank');
+    // win.focus();
 }
