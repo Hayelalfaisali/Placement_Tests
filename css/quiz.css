@@ -32,6 +32,21 @@ img {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.count {
+    padding: 5px;
+}
+
+#timer {
+    padding: 5px;
+    color: white;
+    width: 50px;
+    height: 30px;
+    background-color: #004696;
+    border-radius: 2px;
+}
+
+
+
 .questions {
     margin: 3rem auto;
     width: 95vw;
