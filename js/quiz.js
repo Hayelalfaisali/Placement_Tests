@@ -642,39 +642,40 @@ function nextQuestion() {
         scoreboard.style.display = 'block'
     }
     if (score >= 1 && score <= 5) {
-        level.innerHTML = "Interchange Third Edition Intro, first half";
+        level.innerHTML = "ITEI,FH";
 
     } else if (score >= 6 && score <= 11) {
-        level.innerHTML = "Interchange Third Edition Intro, second half";
+                    level.innerHTML = "ITEI,SH";
+
 
     } else if (score >= 12 && score <= 17) {
-        level.innerHTML = "Interchange Third Edition Level 1, first half";
-
+                    level.innerHTML = "ITEL1,FH";
     } else if (score >= 18 && score <= 23) {
-        level.innerHTML = "Interchange Third Edition Level 1, second half";
+                                level.innerHTML = "ITEL1,SH";
 
     } else if (score >= 24 && score <= 30) {
-        level.innerHTML = "Interchange Third Edition Level 2, first half";
+                                level.innerHTML = "ITEL2,FH";
 
     } else if (score >= 31 && score <= 36) {
-        level.innerHTML = "Interchange Third Edition Level2, second half";
+                                            level.innerHTML = "ITEL2,SH";
 
     } else if (score >= 37 && score <= 42) {
-        level.innerHTML = "Interchange Third Edition Level 3, first half";
+                                            level.innerHTML = "ITEL3,FH";
 
     } else if (score >= 43 && score <= 49) {
-        level.innerHTML = "Interchange Third Edition Level 3, second half";
+                                            level.innerHTML = "ITEL3,SH";
 
     } else if (score >= 50 && score <= 55) {
-        level.innerHTML = "Passages Level 1, first half";
+                                            level.innerHTML = "PL1,FH";
 
     } else if (score >= 56 && score <= 61) {
-        level.innerHTML = "Passages Level 1, second half";
+                                                        level.innerHTML = "PL1,SH";
 
     } else if (score >= 62 && score <= 68) {
-        level.innerHTML = "Passages Level 2, first half";
+                                                        level.innerHTML = "PL2,FH";
 
     } else if (score >= 69 && score <= 70) {
+                                                        level.innerHTML = "PL2,SH";
         level.innerHTML = "Passages Level 2, second half";
 
     }
