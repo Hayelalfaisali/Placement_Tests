@@ -741,10 +741,14 @@ btn.onclick = function() {
 
 function send_handle() {
 
-    let num = document.getElementById("number").value;
-    let msg = document.getElementById("msg").value;
-    msg = level.innerHTML;
-    let name = document.getElementById("name").value;
-    var win = window.open(`https://wa.me/${num}?text=I%27m ${name}%20My result is : %20${msg}`, '_blank');
-    // win.focus();
-}
+        let num = document.getElementById("number").value;
+        let msg = document.getElementById("msg").value;
+        let msg1 = document.getElementById("msg1");
+        msg = level.innerHTML;
+        let name = document.getElementById("name").value;
+        if (name == "") {
+            msg1.innerHTML = "لا يمكنك ترك الاسم فارغا";
+        } else {
+            var win = open(`https://wa.me/${num}?text=I%27m ${name}%20My result is : %20${msg}`, '_blank');
+            // win.focus();
+        }}
