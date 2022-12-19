@@ -138,6 +138,17 @@ button:active {
     display: none;
 }
 
+#scoreboard .saveBtn {
+    margin-top: 20px;
+}
+
+#scoreboard #msg1 {
+    margin-top: 10px;
+    color: red;
+    font-weight: bold;
+    font-size: large;
+}
+
 #score-title {
     margin: 1rem 0;
 }
