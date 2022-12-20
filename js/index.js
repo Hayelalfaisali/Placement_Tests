@@ -1,11 +1,11 @@
-
        var btn = document.getElementById("btn");
        btn.onclick = function() {
-           var password = prompt("Enter the password");
-           if (password == "Hanan") {
-               parent.location = 'quiz.html';
-           } else {
-               var msg = document.getElementById("msg");
-               msg.innerHTML = "كلمة المرور غير صحيحة";
-           }
+
+           parent.location = 'quiz.html';
+       }
+       var note = document.getElementById("TestNotes");
+       note.onclick = function() {
+           document.getElementById("notes").style.display = "block";
+
+
        }
