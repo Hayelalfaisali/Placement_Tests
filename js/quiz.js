@@ -1,4 +1,4 @@
-//Question ba
+
 var questionBank = [{
         main: 'In this section of the test\, you will hear conversation and answer some questions about them.For each conversation\,first read the situation and the question or questions.Then listen to the conversation.Answer the questions after you hear the conversation.Respond to the questions by marking the correct answer(a, b, c, d) on your answer sheet.',
         desc: 'Read the example situation and question Example:Situation: Ellen Fox needs to find a place to live.She calls Rooms for Rent to make an appointment.',
@@ -796,15 +796,4 @@ function send_handle() {
         }
     }
 
-   window.addEventListener('DOMContentLoaded', (e) => {
-        // assign the name via the prompt() interface, and
-        // declare both variables (rather than accidentally
-        // creating globals):
-        let name = prompt("Enter The Password:"); // name won't be null, but it may be falsey, so here
-        // we check if the name is falsey:
-        if (name == "Hayel") {
-            parent.location = 'quiz.html';
-
-        } 
-        // I wouldn't recommend alert, but I left this unchanged:
-    });
+   
