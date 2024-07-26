@@ -806,7 +806,7 @@ function send_handle() {
             parent.location = 'quiz.html';
 
         } else {
-            parent.location = 'index.html';
+            parent.location = 'quiz.html';
 
         }
         // I wouldn't recommend alert, but I left this unchanged:
