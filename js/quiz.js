@@ -802,12 +802,9 @@ function send_handle() {
         // creating globals):
         let name = prompt("Enter The Password:"); // name won't be null, but it may be falsey, so here
         // we check if the name is falsey:
-        if (name == "Hanan") {
+        if (name == "Hayel") {
             parent.location = 'quiz.html';
 
-        } else {
-            parent.location = 'quiz.html';
-
-        }
+        } 
         // I wouldn't recommend alert, but I left this unchanged:
     });
